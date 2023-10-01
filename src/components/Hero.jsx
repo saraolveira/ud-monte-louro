@@ -1,32 +1,19 @@
-import { useState, useEffect } from "react"
-import Papa from "papaparse"
-import Partidos from "./Partidos.jsx"
+import ProximosPartidos from "./ProximosPartidos.jsx"
 
-const Hero = () => {
-  const partidosUrl =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vRdGooOnPBQuZVyeGk0Cg1k33OlrlZgjkUivz8-hwvMahoFKUjszK2z1GESX5zsGfddYRqunbIn69bw/pub?gid=0&single=true&output=csv"
-  const [data, setData] = useState({})
-
-  useEffect(() => {
-    getPartidos()
-  }, [])
-
-  const getPartidos = async () => {
-    Papa.parse(partidosUrl, {
-      download: true,
-      header: true,
-      complete: (results) => {
-        setData(results.data)
-      },
-    })
-  }
-
-  const partidos = Array.from(data)
-  return (
-    <div id="hero" className="w-full h-screen bg-big-stone-950 font-body text-big-stone-50">
-      <Partidos partidos={partidos}/>
-    </div>
-  )
+const Hero = ({ partidos }) => {
+    return (
+        <div
+            id="hero"
+            className="w-full h-screen -mt-24 flex font-body text-big-stone-50 "
+        >
+            <div className="w-8/12 mt-24 flex flex-col pt-28 pl-36 bg-big-stone-950">
+                <h1 className="w-3/4 font-display font-black text-9xl text-fountain-blue-300">
+                    U.D. Monte Louro
+                </h1>
+            </div>
+            <ProximosPartidos partidos={partidos} />
+        </div>
+    )
 }
 
 export default Hero
