@@ -9,14 +9,17 @@ const ProximosPartidos = ({ partidos }) => {
     console.log(proximos4)
 
     return (
-        <div className="w-4/12 mt-24 bg-big-stone-950">
+        <div className="lg:w-4/12 lg:mt-24 bg-big-stone-950">
+            <h2 className="font-display font-semibold uppercase  pt-64 pb-4 text-3xl text-center lg:hidden">
+                Próximos partidos
+            </h2>
             {proximos4.map((partido, i) => (
                 <ProximoPartido
                     key={i}
                     local={partido.local}
                     visitante={partido.visitante}
                     campo={partido.campo}
-                    data={partido.data}
+                    data={partido.dataFormato}
                     hora={partido.hora}
                     logoLocal={partido.logoLocal}
                     logoVisitante={partido.logoVisitante}

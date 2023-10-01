@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors")
+
+// prettier-ignore
 
 export default {
   content: [
@@ -52,11 +54,10 @@ export default {
         },    
       },
       fontFamily: {
-        display: 'Playfair Display',
-        body: 'Open Sans',
+        display: 'Playfair Display Variable',
+        body: 'Open Sans Variable',
       },
     },
   },
   plugins: [],
 }
-
