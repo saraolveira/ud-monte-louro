@@ -8,7 +8,7 @@ const ProximoPartido = ({
     logoVisitante,
 }) => {
     return (
-        <div className="h-1/4  px-2 py-6 flex flex-col justify-evenly items-center bg-big-stone-900 border  border-fountain-blue-300 font-display font-black text-5xl md:py-2 md:text-6xl">
+        <div className="h-1/4 px-2 py-6 flex flex-col justify-evenly items-center bg-big-stone-900 border  border-fountain-blue-300 font-display font-black text-5xl md:py-2 md:text-6xl">
             <div className=" w-full flex justify-evenly items-center md:w-3/4">
                 <img
                     className="w-20 md:w-24"

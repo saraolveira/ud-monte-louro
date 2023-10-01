@@ -9,10 +9,27 @@ const ProximosPartidos = ({ partidos }) => {
     console.log(proximos4)
 
     return (
-        <div className="lg:w-4/12 lg:mt-24 bg-big-stone-950">
-            <h2 className="font-display font-semibold uppercase  pt-64 pb-4 text-3xl text-center lg:hidden">
+        <div className="relative flex flex-col items-center gap-4 lg:w-4/12 lg:mt-24 bg-big-stone-950">
+            <h2 className="font-display font-semibold uppercase  pt-64  text-3xl text-center lg:hidden">
                 Próximos partidos
             </h2>
+            <a
+                    href="#"
+                    className="w-fit group py-2 px-6 flex gap-3 bg-monarch-800 rounded-full font-semibold uppercase transition-all duration-500 hover:bg-fountain-blue-300 hover:text-big-stone-950 lg:absolute lg:top-2 lg:left-2 lg:px-2"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        className="w-5 h-5 fill-big-stone-50 group-hover:fill-big-stone-950 group-hover:rotate-12 transition-all duration-500 "
+                    >
+                        <path
+                            fillRule="evenodd"
+                            d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z"
+                            clipRule="evenodd"
+                        />
+                    </svg>
+                    <p className="lg:hidden">Ver calendario completo</p></a>
+            <div className="w-full h-full">
             {proximos4.map((partido, i) => (
                 <ProximoPartido
                     key={i}
@@ -25,6 +42,7 @@ const ProximosPartidos = ({ partidos }) => {
                     logoVisitante={partido.logoVisitante}
                 />
             ))}
+            </div>
         </div>
     )
 }

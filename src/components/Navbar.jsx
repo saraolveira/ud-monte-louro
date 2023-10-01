@@ -44,12 +44,12 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className="h-20 p-3.5 lg:p-8 xl:p-12 flex justify-between items-center bg-big-stone-100 text-big-stone-900 text-l xl:text-xl font-bold font-body">
+            <nav className="relative z-20 h-20 p-3.5 lg:p-8 xl:p-12 flex justify-between items-center bg-big-stone-100 text-big-stone-900 text-l xl:text-xl font-bold font-body">
                 <div className="flex gap-3 md:gap-4 lg:gap-6">
                     <img
                         src="/logo.svg"
                         alt="Logo U.D. Monte Louro"
-                        className="h-16 z-20"
+                        className="h-16 z-40"
                     />
                     <motion.div
                         className="relative"
@@ -58,7 +58,7 @@ const Navbar = () => {
                         <motion.img
                             src="/rfgf.png"
                             alt="Logo Real Federación Galega de Futbol"
-                            className="h-16 z-20"
+                            className="h-16 z-40"
                             initial={false}
                             variants={dark}
                         />
