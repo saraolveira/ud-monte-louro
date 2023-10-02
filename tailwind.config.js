@@ -55,7 +55,7 @@ export default {
       },
       fontFamily: {
         display: 'Playfair Display Variable',
-        body: 'Open Sans Variable',
+        body: 'Poppins',
       },
     },
   },

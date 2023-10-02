@@ -4,15 +4,15 @@ const Hero = ({ partidos }) => {
     return (
         <div
             id="hero"
-            className="w-full font-body text-big-stone-50 lg:h-screen lg:-mt-24 lg:flex "
+            className="w-full font-body text-big-stone-50 lg:h-screen lg:-mt-24 lg:flex bg-big-stone-950"
         >
-            <div className="flex flex-col pt-8 pl-2 gap-2 items-center bg-big-stone-950 lg:h-full lg:w-8/12 lg:items-start lg:mt-24 lg:pt-28 lg:pl-36 lg:gap-4">
-                <h1 className="w-11/12 font-display font-black text-6xl lg:text-8xl xl:text-9xl text-fountain-blue-300">
+            <div className="flex flex-col pt-8 pl-2 pb-64 gap-2 items-center bg-big-stone-950 lg:w-8/12 lg:items-start lg:mt-24 lg:pt-28 lg:pl-20 lg:gap-4">
+                <h1 className="w-11/12 font-display font-black text-6xl lg:text-8xl xl:text-9xl 2xl:w-10/12 text-fountain-blue-300">
                     U.D. Monte Louro
                 </h1>
                 <a
                     href="#"
-                    className="group py-2 px-6 mt-8 flex gap-3 bg-monarch-800 rounded-full font-semibold uppercase transition-all duration-500 hover:bg-fountain-blue-300 hover:text-big-stone-950 lg:mt-0"
+                    className="group py-2 px-6 mt-8 flex gap-3 bg-monarch-900 rounded-full font-semibold uppercase transition-all duration-500 hover:bg-fountain-blue-300 hover:text-big-stone-950 lg:mt-0"
                 >
                     <svg
                         viewBox="0 0 512 512"
