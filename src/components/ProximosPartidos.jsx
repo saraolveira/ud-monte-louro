@@ -8,7 +8,7 @@ const ProximosPartidos = ({ partidos }) => {
     const proximos4 = sinXogar.slice(0, 4)
 
     return (
-        <div className="relative flex flex-col items-center lg:w-4/12 lg:mt-24 bg-big-stone-900">
+        <div className="relative flex flex-col items-center lg:w-4/12 lg:mt-24 bg-big-stone-950">
             <h2 className="w-full p-6 font-body font-semibold uppercase  text-2xl bg-fountain-blue-300 text-big-stone-950 lg:hidden">
                 Próximos partidos
             </h2>
@@ -34,7 +34,7 @@ const ProximosPartidos = ({ partidos }) => {
             </motion.div>
             <a
                 href="#"
-                className="w-fit group mt-4 mb-4 py-2 px-6 flex gap-3 bg-monarch-900 rounded-full font-semibold uppercase transition-all duration-500 hover:bg-fountain-blue-300 hover:text-big-stone-950 lg:absolute lg:-top-2 lg:left-2 lg:px-2"
+                className="w-fit group mt-4 mb-4 py-2 px-6 flex gap-3 bg-monarch-900 rounded-full font-semibold uppercase transition-all duration-500 hover:bg-fountain-blue-300 hover:text-big-stone-950 lg:absolute lg:-top-2 lg:left-2 lg:px-2 lg:hidden"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
