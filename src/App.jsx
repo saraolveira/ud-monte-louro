@@ -25,7 +25,7 @@ const App = () => {
     const partidos = Array.from(data)
 
     return (
-        <div className="font-body">
+        <div className="font-body overflow-x-hidden">
             <Navbar />
             <Hero partidos={partidos} />
             <UltimosResultados partidos={partidos} />

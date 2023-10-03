@@ -130,12 +130,14 @@ const Navbar = () => {
                     className="lg:hidden"
                 >
                     <motion.div
-                        className="absolute top-0 right-0 w-full h-screen bg-big-stone-900 "
+                        className={`top-0 right-0 w-full h-screen bg-big-stone-900 ${
+                            isOpen ? "fixed" : "absolute"
+                        }`}
                         variants={sidebar}
                     />
                     <motion.div
                         variants={variants}
-                        className="absolute top-0 right-0 w-full h-screen pt-24 pr-6 flex flex-col items-end gap-4 text-big-stone-100 text-3xl"
+                        className="fixed top-0 right-0 w-full h-screen pt-24 pr-6 flex flex-col items-end gap-4 text-big-stone-100 text-3xl"
                     >
                         <MenuItem href="#" text="Inicio" />
                         <MenuItem href="#" text="Calendario" />
