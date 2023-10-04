@@ -9,10 +9,13 @@ const Partido = ({
     golesLocal,
     golesVisitante,
     resultado,
+    className,
 }) => {
     return (
         <>
-            <div className="w-full flex justify-evenly items-center gap-4 md:w-3/4">
+            <div
+                className={`w-full flex justify-evenly items-center gap-4 md:w-3/4 ${className}`}
+            >
                 <img
                     className="w-20 md:w-[5.5rem]"
                     src={"equipos/" + logoLocal + ".png"}
@@ -21,12 +24,12 @@ const Partido = ({
                 <div className="flex flex-col items-center">
                     <div className="font-body text-2xl uppercase font-semibold">
                         {data}
-                        {resultado && (
-                            <div>
-                                {golesLocal} - {golesVisitante}
-                            </div>
-                        )}
                     </div>
+                    {resultado && (
+                        <div>
+                            {golesLocal} - {golesVisitante}
+                        </div>
+                    )}
                     <div>{hora}</div>
                 </div>
                 <img

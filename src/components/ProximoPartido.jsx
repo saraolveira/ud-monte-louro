@@ -27,7 +27,6 @@ const ProximoPartido = ({
                 hora={hora}
                 logoLocal={logoLocal}
                 logoVisitante={logoVisitante}
-                index={index}
             />
             <motion.div
                 className="absolute w-full h-full bg-gradient-to-r from-fountain-blue-500 via-fountain-blue-400 to-fountain-blue-300 top-0 left-0 origin-left"
