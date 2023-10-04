@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import Papa from "papaparse"
-import Hero from "./components/Hero.jsx"
 import Navbar from "./components/Navbar.jsx"
+import Hero from "./components/Hero.jsx"
 import UltimosResultados from "./components/UltimosResultados.jsx"
+import Footer from "./components/Footer.jsx"
 
 const App = () => {
     const partidosUrl =
@@ -25,10 +26,11 @@ const App = () => {
     const partidos = Array.from(data)
 
     return (
-        <div className="font-body overflow-x-hidden">
+        <div className="font-body overflow-x-hidden cursor-default">
             <Navbar />
             <Hero partidos={partidos} />
             <UltimosResultados partidos={partidos} />
+            <Footer />
         </div>
     )
 }

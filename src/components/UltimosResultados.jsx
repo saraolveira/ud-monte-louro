@@ -13,7 +13,7 @@ const UltimosResultados = ({ partidos }) => {
             <h2 className="font-body font-semibold uppercase p-6 bg-fountain-blue-300 text-2xl text-big-stone-950 lg:pl-20 lg:py-8 lg:text-3xl">
                 Últimos resultados
             </h2>
-            <div className="w-full h-full lg:flex lg:flex-wrap xl:flex-nowrap">
+            <div className="w-full h-full lg:grid lg:grid-cols-2 lg:gap-8 lg:p-8 2xl:flex">
                 {ultimos.map((partido, i) => (
                     <UltimoResultado
                         key={i}
