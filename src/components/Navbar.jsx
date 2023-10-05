@@ -1,5 +1,6 @@
 import { motion, useCycle } from "framer-motion"
 import { MenuToggle } from "./MenuToggle.jsx"
+import { Link } from "react-router-dom"
 import MenuItem from "./MenuItem.jsx"
 
 const Navbar = () => {
@@ -87,42 +88,42 @@ const Navbar = () => {
                 </div>
 
                 <div className="hidden lg:flex space-x-6">
-                    <a
-                        href="#"
+                    <Link
+                        to="/inicio"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Inicio
-                    </a>
-                    <a
-                        href="#"
+                    </Link>
+                    <Link
+                        to="/calendario"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Calendario
-                    </a>
-                    <a
-                        href="#"
+                    </Link>
+                    <Link
+                        to="/resultados"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Resultados
-                    </a>
-                    <a
-                        href="#"
+                    </Link>
+                    <Link
+                        to="/clasificacion"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Clasificación
-                    </a>
-                    <a
-                        href="#"
+                    </Link>
+                    <Link
+                        to="/historia"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Historia
-                    </a>
-                    <a
-                        href="#"
+                    </Link>
+                    <Link
+                        to="/noticias"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Noticias
-                    </a>
+                    </Link>
                 </div>
                 <motion.div
                     initial={false}
@@ -139,12 +140,12 @@ const Navbar = () => {
                         variants={variants}
                         className="fixed top-0 right-0 w-full h-screen pt-24 pr-6 flex flex-col items-end gap-4 text-big-stone-100 text-3xl"
                     >
-                        <MenuItem href="#" text="Inicio" />
-                        <MenuItem href="#" text="Calendario" />
-                        <MenuItem href="#" text="Resultados" />
-                        <MenuItem href="#" text="Clasificación" />
-                        <MenuItem href="#" text="Historia" />
-                        <MenuItem href="#" text="Noticias" />
+                        <MenuItem path="/inicio" text="Inicio" />
+                        <MenuItem path="/calendario" text="Calendario" />
+                        <MenuItem path="/resultados" text="Resultados" />
+                        <MenuItem path="/clasificacion" text="Clasificación" />
+                        <MenuItem path="/historia" text="Historia" />
+                        <MenuItem path="/noticias" text="Noticias" />
                     </motion.div>
                     <MenuToggle toggle={() => toggleOpen()} />
                 </motion.div>

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Papa from "papaparse"
-import Navbar from "./components/Navbar.jsx"
-import Hero from "./components/Hero.jsx"
-import UltimosResultados from "./components/UltimosResultados.jsx"
-import Footer from "./components/Footer.jsx"
+import Home from "./pages/Home.jsx"
 
 const App = () => {
     const partidosUrl =
@@ -27,10 +25,19 @@ const App = () => {
 
     return (
         <div className="font-body overflow-x-hidden cursor-default">
-            <Navbar />
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<Home partidos={partidos} />} />
+                    <Route
+                        path="/inicio"
+                        element={<Home partidos={partidos} />}
+                    />
+                </Routes>
+            </BrowserRouter>
+            {/* <Navbar />
             <Hero partidos={partidos} />
             <UltimosResultados partidos={partidos} />
-            <Footer />
+            <Footer /> */}
         </div>
     )
 }
