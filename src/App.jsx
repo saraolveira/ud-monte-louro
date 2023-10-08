@@ -6,6 +6,8 @@ import Papa from "papaparse"
 import Navbar from "./components/Navbar.jsx"
 import Footer from "./components/Footer.jsx"
 import Home from "./pages/Home.jsx"
+import Calendario from "./pages/Calendario.jsx"
+import Resultados from "./pages/Resultados.jsx"
 import Clasificacion from "./pages/Clasificacion.jsx"
 
 const App = () => {
@@ -32,6 +34,14 @@ const App = () => {
         {
             path: "/",
             element: <Home partidos={partidos} />,
+        },
+        {
+            path: "/calendario",
+            element: <Calendario partidos={partidos} />,
+        },
+        {
+            path: "/resultados",
+            element: <Resultados partidos={partidos} />,
         },
         {
             path: "/clasificacion",

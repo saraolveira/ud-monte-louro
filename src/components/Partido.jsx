@@ -14,7 +14,7 @@ const Partido = ({
     return (
         <>
             <div
-                className={`w-full flex justify-evenly items-center gap-4 md:w-3/4 ${className}`}
+                className={`w-full flex justify-evenly items-center gap-4  ${className}`}
             >
                 <img
                     className="w-20 md:w-[5.5rem]"

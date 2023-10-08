@@ -6,8 +6,6 @@ import MenuItem from "./MenuItem.jsx"
 const Navbar = () => {
     const [isOpen, toggleOpen] = useCycle(false, true)
 
-    console.log(isOpen)
-
     const sidebar = {
         open: (height = 1000) => ({
             clipPath: `circle(${height * 2 + 200}px at calc(100% - 35px) 40px)`,

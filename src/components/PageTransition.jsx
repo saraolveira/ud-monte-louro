@@ -15,7 +15,7 @@ const PageTransition = () => {
                 transition: { duration: 0.5, ease: "circIn" },
             }}
             style={{ originX: isPresent ? 0 : 1 }}
-            className="fixed top-0 left-0 right-0 bottom-0 bg-fountain-blue-300"
+            className="fixed top-0 left-0 right-0 bottom-0 bg-fountain-blue-300 z-40 lg:z-10"
         />
     )
 }

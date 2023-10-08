@@ -33,7 +33,7 @@ const UltimoResultado = ({
     return (
         <div className="relative w-full">
             <div
-                className={`w-full h-48 px-2 py-6 flex flex-col justify-center items-center border border-fountain-blue-300   bg-big-stone-900 font-display font-black text-5xl cursor-pointer lg:rounded-2xl lg:border-2 lg:border-big-stone-800`}
+                className={`w-full h-48 px-2 py-6 flex flex-col justify-center items-center border border-fountain-blue-300   bg-big-stone-950 font-display font-black text-5xl cursor-pointer lg:rounded-2xl lg:border-2 lg:border-big-stone-900`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -56,7 +56,7 @@ const UltimoResultado = ({
                     opacity,
                     WebkitMaskImage: `radial-gradient(30% 90px at ${position.x}px ${position.y}px, black 45%, transparent)`,
                 }}
-                className="absolute w-full h-48 top-0 left-0 bg-transparent pointer-events-none border-2 border-fountain-blue-300 rounded-2xl opacity-0 transition-opacity duration-500 "
+                className="absolute w-full h-48 top-0 left-0 bg-transparent pointer-events-none border-2 border-fountain-blue-300 lg:rounded-2xl opacity-0 transition-opacity duration-500 "
                 aria-hidden="true"
             ></div>
         </div>
