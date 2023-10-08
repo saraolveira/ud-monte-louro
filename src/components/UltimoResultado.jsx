@@ -33,7 +33,7 @@ const UltimoResultado = ({
     return (
         <div className="relative w-full">
             <div
-                className={`w-full h-48 px-2 py-6 flex flex-col justify-center items-center border-2 border-big-stone-800 rounded-2xl bg-big-stone-900 font-display font-black text-5xl cursor-pointer`}
+                className={`w-full h-48 px-2 py-6 flex flex-col justify-center items-center border border-fountain-blue-300   bg-big-stone-900 font-display font-black text-5xl cursor-pointer lg:rounded-2xl lg:border-2 lg:border-big-stone-800`}
                 onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}

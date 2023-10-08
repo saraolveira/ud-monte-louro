@@ -6,6 +6,8 @@ import MenuItem from "./MenuItem.jsx"
 const Navbar = () => {
     const [isOpen, toggleOpen] = useCycle(false, true)
 
+    console.log(isOpen)
+
     const sidebar = {
         open: (height = 1000) => ({
             clipPath: `circle(${height * 2 + 200}px at calc(100% - 35px) 40px)`,
@@ -89,7 +91,7 @@ const Navbar = () => {
 
                 <div className="hidden lg:flex space-x-6">
                     <Link
-                        to="/inicio"
+                        to="/"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
                         Inicio
@@ -140,12 +142,36 @@ const Navbar = () => {
                         variants={variants}
                         className="fixed top-0 right-0 w-full h-screen pt-24 pr-6 flex flex-col items-end gap-4 text-big-stone-100 text-3xl"
                     >
-                        <MenuItem path="/inicio" text="Inicio" />
-                        <MenuItem path="/calendario" text="Calendario" />
-                        <MenuItem path="/resultados" text="Resultados" />
-                        <MenuItem path="/clasificacion" text="Clasificación" />
-                        <MenuItem path="/historia" text="Historia" />
-                        <MenuItem path="/noticias" text="Noticias" />
+                        <MenuItem
+                            toggle={() => toggleOpen()}
+                            path="/"
+                            text="Inicio"
+                        />
+                        <MenuItem
+                            toggle={() => toggleOpen()}
+                            path="/calendario"
+                            text="Calendario"
+                        />
+                        <MenuItem
+                            toggle={() => toggleOpen()}
+                            path="/resultados"
+                            text="Resultados"
+                        />
+                        <MenuItem
+                            toggle={() => toggleOpen()}
+                            path="/clasificacion"
+                            text="Clasificación"
+                        />
+                        <MenuItem
+                            toggle={() => toggleOpen()}
+                            path="/historia"
+                            text="Historia"
+                        />
+                        <MenuItem
+                            toggle={() => toggleOpen()}
+                            path="/noticias"
+                            text="Noticias"
+                        />
                     </motion.div>
                     <MenuToggle toggle={() => toggleOpen()} />
                 </motion.div>

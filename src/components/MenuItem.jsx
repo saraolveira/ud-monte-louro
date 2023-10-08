@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-const MenuItem = ({ path, text }) => {
+const MenuItem = ({ path, text, toggle }) => {
     const items = {
         open: {
             y: 0,
@@ -21,6 +21,7 @@ const MenuItem = ({ path, text }) => {
     return (
         <motion.div variants={items}>
             <Link
+                onClick={toggle}
                 className="transition-colors duration-300 hover:text-fountain-blue-400"
                 to={path}
             >

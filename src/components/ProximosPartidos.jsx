@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import ProximoPartido from "./ProximoPartido.jsx"
 const ProximosPartidos = ({ partidos }) => {
     const sinXogar = partidos.filter(
@@ -13,11 +12,7 @@ const ProximosPartidos = ({ partidos }) => {
                 Próximos partidos
             </h2>
 
-            <motion.div
-                className="w-full h-full lg:divide-y-2 lg:divide-fountain-blue-300"
-                animate="visible"
-                variants="variants"
-            >
+            <div className="w-full h-full lg:divide-y-2 lg:divide-fountain-blue-300">
                 {proximos4.map((partido, i) => (
                     <ProximoPartido
                         key={i}
@@ -31,7 +26,7 @@ const ProximosPartidos = ({ partidos }) => {
                         index={i}
                     />
                 ))}
-            </motion.div>
+            </div>
             <a
                 href="#"
                 className="w-fit group mt-4 mb-4 py-2 px-6 flex gap-3 bg-monarch-900 rounded-full font-semibold uppercase transition-all duration-500 hover:bg-fountain-blue-300 hover:text-big-stone-950 lg:absolute lg:-top-2 lg:left-2 lg:px-2 lg:hidden"
