@@ -1,6 +1,8 @@
+import PartidoXogando from "./PartidoXogando.jsx"
 import ProximosPartidos from "./ProximosPartidos.jsx"
 
 const Hero = ({ partidos }) => {
+    const live = partidos.filter((partido) => partido.estado === "xogando")
     return (
         <div
             id="hero"
@@ -24,7 +26,20 @@ const Hero = ({ partidos }) => {
                     </svg>
                     Encargar camisetas{" "}
                 </a>
-                <div className="bg-big-stone-950"></div>
+                <div className="w-11/12 bg-big-stone-950 mt-16 lg:w-6/12">
+                    {live.map((partido, i) => (
+                        <PartidoXogando
+                            key={i}
+                            local={partido.local}
+                            visitante={partido.visitante}
+                            logoLocal={partido.logoLocal}
+                            logoVisitante={partido.logoVisitante}
+                            golesLocal={partido.golesLocal}
+                            golesVisitante={partido.golesVisitante}
+                            resultado={partido.estado}
+                        />
+                    ))}
+                </div>
             </div>
             <ProximosPartidos partidos={partidos} />
         </div>
