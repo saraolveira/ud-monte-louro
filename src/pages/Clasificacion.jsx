@@ -1,10 +1,10 @@
 import ClasificacionTabla from "../components/ClasificacionTabla"
 import PageTransition from "../components/PageTransition.jsx"
 
-const Clasificacion = () => {
+const Clasificacion = ({ clasificacion }) => {
     return (
         <>
-            <ClasificacionTabla />
+            <ClasificacionTabla clasificacion={clasificacion} />
             <PageTransition />
         </>
     )

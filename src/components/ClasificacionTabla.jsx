@@ -1,26 +1,6 @@
-import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import Papa from "papaparse"
 
-const ClasificacionTabla = () => {
-    const clasificacionUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSIOAMkYx6XyqObShL_kNEQu6vjkWWBd_cXKFEkKLwRCCuc2IU8wamillJ97Fu7YeslBGnDvCeeUz5F/pub?output=csv"
-    const [data, setData] = useState({})
-
-    useEffect(() => {
-        getClasificacion()
-    }, [])
-
-    const getClasificacion = async () => {
-        Papa.parse(clasificacionUrl, {
-            download: true,
-            header: true,
-            complete: (results) => {
-                setData(results.data)
-            },
-        })
-    }
-    const clasificacion = Array.from(data)
+const ClasificacionTabla = ({ clasificacion }) => {
     return (
         <div className="w-full min-h-screen bg-big-stone-950 text-big-stone-100 pb-4 lg:pb-12">
             <table className="w-full table-auto text-center text-sm lg:text-xl">
