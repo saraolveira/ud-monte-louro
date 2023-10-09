@@ -121,10 +121,10 @@ const Navbar = () => {
                         Historia
                     </Link>
                     <Link
-                        to="/noticias"
+                        to="/galeria"
                         className="hover:text-fountain-blue-400 transition-colors duration-300"
                     >
-                        Noticias
+                        Galeria
                     </Link>
                 </div>
                 <motion.div
@@ -169,8 +169,8 @@ const Navbar = () => {
                         />
                         <MenuItem
                             toggle={() => toggleOpen()}
-                            path="/noticias"
-                            text="Noticias"
+                            path="/galeria"
+                            text="Galeria"
                         />
                     </motion.div>
                     <MenuToggle toggle={() => toggleOpen()} />
