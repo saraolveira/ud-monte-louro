@@ -4,14 +4,38 @@ const Galeria = () => {
     const [openModal, setOpenModal] = useState(false)
 
     const images = [
-        { img: "/partidos/louro-cabana-1.jpg", alt: "" },
-        { img: "/partidos/louro-cabana-2.jpg", alt: "" },
-        { img: "/partidos/volantes-louro-1.jpg", alt: "" },
-        { img: "/partidos/volantes-louro-2.jpg", alt: "" },
-        { img: "/partidos/volantes-louro-3.jpg", alt: "" },
-        { img: "/partidos/louro-muros-1.jpg", alt: "" },
-        { img: "/partidos/louro-muros-2.jpg", alt: "" },
-        { img: "/partidos/louro-muros-3.jpg", alt: "" },
+        {
+            img: "/partidos/louro-cabana-1.jpg",
+            alt: "U.D. Monte Louro 1 - 0 Cabana S.D. | 17/09/2023",
+        },
+        {
+            img: "/partidos/louro-cabana-2.jpg",
+            alt: "U.D. Monte Louro 1 - 0 Cabana S.D. | 17/09/2023",
+        },
+        {
+            img: "/partidos/volantes-louro-1.jpg",
+            alt: "Volantes de Baño F.C. 2 - 4 U.D. Monte Louro | 24/09/2023",
+        },
+        {
+            img: "/partidos/volantes-louro-2.jpg",
+            alt: "Volantes de Baño F.C. 2 - 4 U.D. Monte Louro | 24/09/2023",
+        },
+        {
+            img: "/partidos/volantes-louro-3.jpg",
+            alt: "Volantes de Baño F.C. 2 - 4 U.D. Monte Louro | 24/09/2023",
+        },
+        {
+            img: "/partidos/louro-muros-1.jpg",
+            alt: "U.D. Monte Louro 3 - 1 C.D. Muros | 30/09/2023",
+        },
+        {
+            img: "/partidos/louro-muros-2.jpg",
+            alt: "U.D. Monte Louro 3 - 1 C.D. Muros | 30/09/2023",
+        },
+        {
+            img: "/partidos/louro-muros-3.jpg",
+            alt: "U.D. Monte Louro 3 - 1 C.D. Muros, 30/09/2023",
+        },
     ]
 
     const handleOpenModal = (i) => {
@@ -46,12 +70,12 @@ const Galeria = () => {
             }`}
         >
             {openModal && (
-                <div className="text-fountain-blue-300 flex justify-evenly items-center gap-4">
+                <div className="relative text-fountain-blue-300 flex flex-wrap justify-evenly items-center gap-4 lg:flex-nowrap">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="w-14 h-14 cursor-pointer transition-colors duration-300 hover:text-monarch-900"
+                        className="w-14 h-14 cursor-pointer transition-colors duration-300 hover:text-monarch-900 lg:order-1"
                         onClick={handlePrevious}
                     >
                         <path
@@ -61,19 +85,29 @@ const Galeria = () => {
                         />
                     </svg>
 
-                    <div className="flex items-center justify-center">
+                    <div className="flex flex-col order-first items-center justify-center lg:order-2">
                         <img
                             src={images[slide].img}
                             alt=""
-                            className="lg:h-[calc(100vh-8rem)] select-none"
+                            className="lg:h-[calc(100vh-12rem)] select-none"
                         />
+                        <p className="mt-4 text-lg text-big-stone-100 text-center">
+                            {images[slide].alt}
+                        </p>
+                    </div>
+
+                    <div
+                        className="cursor-pointer p-2 rounded-full text-big-stone-950 font-medium bg-fountain-blue-300 transition-colors duration-300 hover:bg-monarch-900 hover:text-big-stone-100 lg:absolute lg:top-0 lg:right-20 select-none"
+                        onClick={handleCloseModal}
+                    >
+                        Volver a galería
                     </div>
 
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="w-14 h-14 cursor-pointer transition-colors duration-300 hover:text-monarch-900"
+                        className="w-14 h-14 cursor-pointer transition-colors duration-300 hover:text-monarch-900 lg:order-last"
                         onClick={handleNext}
                     >
                         <path
