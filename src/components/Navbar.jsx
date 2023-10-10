@@ -140,7 +140,11 @@ const Navbar = () => {
                     />
                     <motion.div
                         variants={variants}
-                        className="fixed top-0 right-0 w-full h-screen pt-24 pr-6 flex flex-col items-end gap-4 text-big-stone-100 text-3xl"
+                        className={`fixed top-0 right-0 w-full h-screen pt-24 pr-6 flex flex-col items-end gap-4 text-big-stone-100 text-3xl ${
+                            isOpen
+                                ? "pointer-events-auto"
+                                : "pointer-events-none"
+                        }`}
                     >
                         <MenuItem
                             toggle={() => toggleOpen()}

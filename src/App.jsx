@@ -9,6 +9,7 @@ import Home from "./pages/Home.jsx"
 import Calendario from "./pages/Calendario.jsx"
 import Resultados from "./pages/Resultados.jsx"
 import Clasificacion from "./pages/Clasificacion.jsx"
+import Galeria from "./pages/Galeria.jsx"
 
 const App = () => {
     const partidosUrl =
@@ -62,6 +63,10 @@ const App = () => {
         {
             path: "/clasificacion",
             element: <Clasificacion clasificacion={clasificacion} />,
+        },
+        {
+            path: "/galeria",
+            element: <Galeria />,
         },
     ])
 
